@@ -63,7 +63,6 @@ from fastai.basic_train import requires_grad
 from torch.nn import SmoothL1Loss, MSELoss
 import gpytorch
 from torch.nn.modules.loss import _Loss
-from mxresnet import mxresnet34, mxresnet50
 
 
 def loss_with_flag(outputs, labels):

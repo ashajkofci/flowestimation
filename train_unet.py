@@ -59,7 +59,6 @@ from fastai.basics import dataclass, Callback, Learner, Path, load_learner
 from fastai.callbacks import SaveModelCallback
 from fastai.callbacks import SaveModelCallback, TrainingPhase, GeneralScheduler
 from fastai.callback import annealing_cos
-from mxresnet import mxresnet34, mxresnet50
 import fastai
 from fastai.basic_data import DataBunch, DatasetType, TensorDataset, DataLoader
 
