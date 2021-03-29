@@ -13,9 +13,13 @@ The following python libraries are required. We advise the use of the conda pack
 > scikit-image
 > pytorch
 > matplotlib
-> PyQt5
+> scipy
 > pandas
 > scikit-learn
+> fastai
+> gpytorch
+> tensorboard
+
 
 For example, you can install all the requirements by using
 > conda install --file requirements.txt
@@ -24,29 +28,23 @@ For example, you can install all the requirements by using
 Launch the file `generate_training_set.py` with the according parameters
 
 ## Training
-Launch `train.py` and modify the parameters to match the training set folder.
+Model with PSF locations with moving window: Launch `train_window.py` and modify the parameters to match the training set folder.
+Model with PSF locations with Unet: Launch `train_unet.py` and modify the parameters to match the training set folder.
 
-## Deconvolution
-The code for deconvolution is in the separate directory `https://github.com/idiap/semiblindpsfdeconv`
-
-## Generating figures and tables
-The benchmark table is in file `benchmark_models.py`; noise resistance figure in `figure_noise_resistance.py`, and the depth-from-focus figure in `figure_depth.py`
+## Testing
+Model with PSF locations with moving window: Launch `testing_window.py`.
+Model with PSF locations with Unet: Launch `testing_unet.py`.
 
 ## Citation
 For any use of the code or parts of the code, please cite:
 
-@article{shajkofci_spatially-variant_2020,
-  ids = {shajkofci\_spatially-variant\_2020},
-  title = {Spatially-{{Variant CNN}}-{{Based Point Spread Function Estimation}} for {{Blind Deconvolution}} and {{Depth Estimation}} in {{Optical Microscopy}}},
-  author = {Shajkofci, Adrian and Liebling, Michael},
-  date = {2020},
-  journaltitle = {IEEE Transactions on Image Processing},
-  volume = {29},
-  pages = {5848--5861},
-  issn = {1941-0042},
-  doi = {10.1109/TIP.2020.2986880},
-  eventtitle = {{{IEEE Transactions}} on {{Image Processing}}},
-  keywords = {blind deconvolution,Calibration,convolutional neural networks,Deconvolution,depth from focus,Estimation,Microscopy,Optical diffraction,Optical imaging,Optical microscopy,point spread function estimation}
+@article{shajkofci_estimating_2020,
+    title={Estimating Nonplanar Flow from 2D Motion-blurred Widefield Microscopy Images via Deep Learning}, 
+    author={Adrian Shajkofci and Michael Liebling},
+    year={2021},
+    eprint={2102.07228},
+    archivePrefix={arXiv},
+    primaryClass={eess.IV}
 }
 
 
